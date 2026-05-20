@@ -11,7 +11,7 @@ class DateStorageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DateStorage
-        fields = ['id', 'start_date', 'end_date']
+        fields = ['id', 'start_date', 'end_date', 'backup_status']
 
     def validate(self, data):
         start = data.get('start_date') or (
