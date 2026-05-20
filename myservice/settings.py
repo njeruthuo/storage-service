@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-obl%x8qj1$3q09he=okijitn&@^v_=egm#xvx9v8cuud80vgz!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG") == 'True'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['storage-service-4nwv.onrender.com']
 
 
 # Application definition
