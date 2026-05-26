@@ -11,10 +11,10 @@ class DateStorage(models.Model):
 
     def save(self, *args, **kwargs):  # type: ignore
         # Force start time to exactly 07:30:00
-        # if self.start_date:
-        #     self.start_date = self.start_date.replace(
-        #         hour=7, minute=30, second=0, microsecond=0
-        #     )
+        if self.start_date:
+            self.start_date = self.start_date.replace(
+                second=0, microsecond=0
+            )
 
         # Force end time to exactly 17:30:00 (5:30 PM)
         if self.end_date:
