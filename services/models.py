@@ -13,7 +13,7 @@ class DateStorage(models.Model):
         # Force start time to exactly 07:30:00
         if self.start_date:
             self.start_date = self.start_date.replace(
-                hour=7, minute=30, second=0, microsecond=0
+                 second=0, microsecond=0
             )
 
         # Force end time to exactly 17:30:00 (5:30 PM)
