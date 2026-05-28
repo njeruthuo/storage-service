@@ -10,3 +10,4 @@ pytest
 pytest-django
 gunicorn
 whitenoise
+wfastcgi
