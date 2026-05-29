@@ -56,12 +56,13 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "https://rhinocharge-leaderboard.vercel.app",
-#     "http://localhost:5173",
-# ]
-
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://rhinocharge-leaderboard.bluetrax.co.ke",
+    "https://rhinocharge-leaderboard.vercel.app",
+    "http://localhost:5173",
+]
 
 ROOT_URLCONF = 'myservice.urls'
 
