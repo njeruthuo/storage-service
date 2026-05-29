@@ -6,6 +6,8 @@ class DateStorage(models.Model):
     end_date = models.DateTimeField()
     backup_status = models.BooleanField(default=False)
 
+    start_cp_time = models.TimeField(null=True)
+
     def __str__(self) -> str:
         return f"{self.start_date.year} competition"
 
@@ -13,13 +15,18 @@ class DateStorage(models.Model):
         # Force start time to exactly 07:30:00
         if self.start_date:
             self.start_date = self.start_date.replace(
-                 second=0, microsecond=0
+                second=0, microsecond=0
             )
 
         # Force end time to exactly 17:30:00 (5:30 PM)
         if self.end_date:
             self.end_date = self.end_date.replace(
                 hour=17, minute=30, second=0, microsecond=0
+            )
+
+        if self.start_cp_time:
+            self.start_cp_time = self.start_cp_time.replace(
+                second=0, microsecond=0
             )
 
         # Enforce Singleton pattern: block creation if a record already exists

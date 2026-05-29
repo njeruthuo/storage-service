@@ -8,10 +8,13 @@ class DateStorageSerializer(serializers.ModelSerializer):
         format="%Y-%m-%d %H:%M:%S", required=True)
     end_date = serializers.DateTimeField(
         format="%Y-%m-%d %H:%M:%S", required=True)
+    start_cp_time = serializers.TimeField(
+        format="%H:%M:%S", required=True)
 
     class Meta:
         model = DateStorage
-        fields = ['id', 'start_date', 'end_date', 'backup_status']
+        fields = ['id', 'start_date', 'end_date',
+                  'backup_status', 'start_cp_time']
 
     def validate(self, data):
         start = data.get('start_date') or (

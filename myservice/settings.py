@@ -60,7 +60,7 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "storage-service.bluetrax.co.ke",
+    "https://storage-service.bluetrax.co.ke",
     "https://rhinocharge-leaderboard.bluetrax.co.ke",
     "https://rhinocharge-leaderboard.vercel.app",
     "http://localhost:5173",
